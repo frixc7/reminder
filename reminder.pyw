@@ -31,15 +31,12 @@ def break_reminder():
     scheduler.enter(delay = 3600, priority = 2, action = break_reminder) # calls for another reminder after delay
     
 def sight_reminder():
-    """Reminder for taking an eyesight break."""
+    """Reminder to give your eyes a break from screentime."""
     
-    # start = time.time()
-    for _ in range(55): # this will run for 20 minutes
-        say_sentence("It's time to take an eyesight break for 20 minutes.")
+    for _ in range(55): # a lot of loops to bother you so that you get up from your desk
+        say_sentence("It's time to give your eyes a break.")
         for _ in range(5):
             ws.Beep(5000, 250)
-    # end = time.time()
-    # print(f"{end - start:.5f}")
     
     scheduler.enter(delay = 7200, priority = 1, action = sight_reminder) # calls for another reminder after delay
 
