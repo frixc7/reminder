@@ -43,8 +43,8 @@ def sight_reminder():
 scheduler = sched.scheduler(time.time, time.sleep)
 
 """Initial reminders"""
-scheduler.enter(delay = 900, priority = 3, action = posture_reminder) 
-scheduler.enter(delay = 3600, priority = 2, action = break_reminder)
-scheduler.enter(delay = 7200, priority = 1, action = sight_reminder)
+scheduler.enter(delay = 900, priority = 3, action = posture_reminder) # reminder after 15 minutes
+scheduler.enter(delay = 4200, priority = 2, action = break_reminder) # reminder after 1 hour and 10 minutes (for physical break)
+scheduler.enter(delay = 9000, priority = 1, action = sight_reminder) # reminder after 2 hours and 30 minutes (for physical and eye breaks)
 
 scheduler.run()
