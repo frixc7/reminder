@@ -1,4 +1,4 @@
-This script reminds you to take a break from computer screentime.
+This script reminds you to fix your posture and take a break from computer screentime.
 
 To start the script, run "reminder.pyw"
 
